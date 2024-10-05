@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+  viewBinding {
+    enabled true
+  }
+
+  defaultConfig {
+    applicationId "org.hyperskill.secretdiary"
+    minSdk 25
+    targetSdk 31
+    versionCode 1
+    versionName '0.2'
+  }
+
+  buildFeatures {
+    viewBinding true
+  }
+  compileSdk 34
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+  implementation 'androidx.test:core-ktx:1.4.0'
+  def kotlinVersion = hs.android.kotlinVersion
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+  def coreKtx = hs.android.lib.coreKtx
+  implementation "androidx.core:core-ktx:$coreKtx"
+
+  def appCompat = hs.android.lib.appCompat
+  implementation "androidx.appcompat:appcompat:$appCompat"
+
+  def constraintLayout = hs.android.lib.constraintLayout
+  implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+
+  def material = hs.android.lib.material
+  implementation "com.google.android.material:material:$material"
+
+  implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.2")
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Geheimes Tagebuch</string>
+    <string name="log_in">Einloggen</string>
+    <string name="enter_pin">PIN</string>
+    <string name="secret_diary">Geheimes Tagebuch</string>
+    <string name="blank_warning">Leere Einträge können nicht gespeichert werden!</string>
+    <string name="undo_msg">Möchtest du wirklich den letzten Eintrag löschen? Diese Aktion kann nicht rückgängig gemacht werden!</string>
+    <string name="remove_last_note">Letzten Eintrag löschen</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="wrong_pin">Falsche PIN!</string>
+    <string name="dear_diary">Liebes Tagebuch…</string>
+    <string name="undo">Löschen</string>
+    <string name="save">Speichern</string>
+    <string name="main_title">Geheimes Tagebuch</string>
+</resources>
