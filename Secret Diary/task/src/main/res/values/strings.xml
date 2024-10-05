@@ -9,7 +9,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="wrong_pin">Wrong PIN!</string>
-    <string name="dear_diary">Dear Diary...</string>
+    <string name="dear_diary">Dear Diary…</string>
     <string name="undo">Undo</string>
     <string name="save">Save</string>
 </resources>
