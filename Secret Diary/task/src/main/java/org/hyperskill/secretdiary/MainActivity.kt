@@ -1,5 +1,6 @@
 package org.hyperskill.secretdiary
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.os.Bundle
 import android.app.AlertDialog
 import android.content.Context
@@ -10,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.datetime.Clock
+import org.hyperskill.secretdiary.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -17,18 +19,19 @@ data class Entry(val timestamp: String, val text: String)
 
 class MainActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var binding: ActivityMainBinding
     private val entriesArray = ArrayDeque<Entry>()
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         sharedPreferences = getSharedPreferences("PREF_DIARY", Context.MODE_PRIVATE)
-
-        val editText = findViewById<EditText>(R.id.etNewWriting)
-        val button = findViewById<Button>(R.id.btnSave)
-        val diary = findViewById<TextView>(R.id.tvDiary)
-        val undoButton = findViewById<Button>(R.id.btnUndo)
+        val editText = binding.etNewWriting
+        val button = binding.btnSave
+        val diary = binding.tvDiary
+        val undoButton = binding.btnUndo
         // loading saved data at startup
         diary.text = loadSaveData()
 
