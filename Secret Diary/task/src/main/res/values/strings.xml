@@ -3,4 +3,13 @@
     <string name="log_in">Log In</string>
     <string name="enter_pin">Enter PIN</string>
     <string name="secret_diary">Secret Diary</string>
+    <string name="blank_warning">Empty or blank input cannot be saved</string>
+    <string name="undo_msg">Do you really want to remove the last writing? This operation cannot be undone!</string>
+    <string name="remove_last_note">Remove last note</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="wrong_pin">Wrong PIN!</string>
+    <string name="dear_diary">Dear Diary...</string>
+    <string name="undo">Undo</string>
+    <string name="save">Save</string>
 </resources>

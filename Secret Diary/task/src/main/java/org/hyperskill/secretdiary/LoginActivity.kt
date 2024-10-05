@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                pinEntered.error = "Wrong PIN!"
+                pinEntered.error = getString(R.string.wrong_pin)
             }
         }
 

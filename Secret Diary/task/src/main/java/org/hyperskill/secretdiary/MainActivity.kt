@@ -38,20 +38,20 @@ class MainActivity : AppCompatActivity() {
                 diary.text = getEntriesString()
                 editText.text.clear()
             } else {
-                val text = "Empty or blank input cannot be saved"
+                val text = getString(R.string.blank_warning)
                 Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
             }
         }
 
         undoButton.setOnClickListener {
             AlertDialog.Builder(this)
-                .setTitle("Remove last note")
-                .setMessage("Do you really want to remove the last writing? This operation cannot be undone!")
-                .setPositiveButton("Yes") { _, _ ->
+                .setTitle(getString(R.string.remove_last_note))
+                .setMessage(getString(R.string.undo_msg))
+                .setPositiveButton(getString(R.string.yes)) { _, _ ->
                     deleteEntry()
                     diary.text = getEntriesString()
                 }
-                .setNegativeButton("No", null)
+                .setNegativeButton(getString(R.string.no), null)
                 .show()
         }
     }
